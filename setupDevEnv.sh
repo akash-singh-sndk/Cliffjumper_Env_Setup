@@ -96,7 +96,7 @@ check_migration_requirements() {
             info "Please run this script as root (sudo) to auto-install missing packages."
             info "Or install manually using your package manager:"
             info "  Ubuntu/Debian: sudo apt-get install wget tar make clang clang++ build-essential libssl-dev libffi-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev"
-            info "  RHEL/AlmaLinux: sudo dnf install wget tar make clang clang++ openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel"
+            info "  RHEL/AlmaLinux: dnf install -y wget tar make clang openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel ncurses-devel xz-devel glibc-devel"
             exit 1
         fi
         # Detect package manager and install
