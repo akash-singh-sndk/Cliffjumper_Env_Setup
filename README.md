@@ -2,6 +2,8 @@
 
 Follow this readme inorder to understand how to use the `setupDevEnv.sh` script to set up a complete development environment for migrating Windows Visual Studio projects to Linux using Meson + Clang. Follow the steps below in order for a successful setup.
 
+### Note: Estimated time 30-45 minutes for complete setup configuration. Python downloading may feel like stucked around 62%, please don't terminate that, its AlmaLinux bug
+
 ## Prerequisites
 - Linux system (Ubuntu, Debian, RHEL, AlmaLinux, etc.)
 - Root privileges (run with `sudo`)
@@ -10,7 +12,7 @@ Follow this readme inorder to understand how to use the `setupDevEnv.sh` script 
 ## Step-by-Step Setup
 
 ### 1. Clone the Repository
-Clone or download the repository containing `mainPort.sh` and related files.
+Clone or download the repository containing `setupDevEnv.sh` and related files.
 
 ### 2. Install System Dependencies
 The script will check for required tools and install automatically. If any are missing, or you can install them using your package manager manually:
@@ -27,16 +29,16 @@ sudo dnf install wget tar make clang clang++ openssl-devel libffi-devel zlib-dev
 ### 3. Run the Setup Script
 Run the script as root:
 ```bash
-sudo ./mainPort.sh (default python 3.8.10 & Boost 1.82.0)
+sudo ./setupDevEnv.sh (default python 3.8.10 & Boost 1.82.0)
 OR
-sudo ./mainPort.sh --install [PYTHON_VERSION] [BOOST_VERSION]
+sudo ./setupDevEnv.sh --install [PYTHON_VERSION] [BOOST_VERSION]
 ```
 - `[PYTHON_VERSION]` (optional): Specify Python version (default: 3.8.10)
 - `[BOOST_VERSION]` (optional): Specify Boost version (default: 1.82.0)
 
 Example:
 ```bash
-sudo ./mainPort.sh --install 3.8.10 1.82.0
+sudo ./setupDevEnv.sh --install 3.8.10 1.82.0
 ```
 
 ### 4. Script Execution Phases
