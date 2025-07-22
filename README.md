@@ -23,7 +23,7 @@ sudo apt-get install wget tar make clang clang++ build-essential libssl-dev libf
 ```
 **RHEL/AlmaLinux:**
 ```bash
-sudo dnf install wget tar make clang clang++ openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel
+sudo dnf install -y wget tar make clang openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel ncurses-devel xz-devel glibc-devel
 ```
 
 ### 3. Run the Setup Script
