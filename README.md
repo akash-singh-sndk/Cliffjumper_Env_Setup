@@ -2,7 +2,9 @@
 
 Follow this readme inorder to understand how to use the `setupDevEnv.sh` script to set up a complete development environment for migrating Windows Visual Studio projects to Linux using Meson + Clang. Follow the steps below in order for a successful setup.
 
-### Note: Estimated time 30-45 minutes for complete setup configuration. Python downloading may feel like stucked around 62%, please don't terminate that, its AlmaLinux bug
+### Note: 
+1. Estimated time 30-45 minutes for complete setup configuration. Python downloading may feel like stucked around 62%, please don't terminate that, its AlmaLinux bug.
+2. If you try to install Boost v1.80.0, it will failled (because of clang dependency): This error is caused by a known incompatibility between Boost 1.80.0 and newer versions of Clang (especially Clang 15+), due to stricter enum conversion rules in C++17 and later. Boost 1.80.0's MPL library uses values outside the valid range for some enums, which Clang now treats as an error. Recommendation Boost version >= v1.82.0
 
 ## Prerequisites
 - Linux system (Ubuntu, Debian, RHEL, AlmaLinux, etc.)
