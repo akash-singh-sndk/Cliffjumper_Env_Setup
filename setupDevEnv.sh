@@ -106,10 +106,10 @@ check_migration_requirements() {
             apt-get install -y wget tar make clang clang++ build-essential libssl-dev libffi-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
         elif command -v dnf >/dev/null 2>&1; then
             info "Installing missing packages with dnf..."
-            dnf install -y wget tar make clang clang++ openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel
+            dnf install -y wget tar make clang openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel ncurses-devel xz-devel glibc-devel
         elif command -v yum >/dev/null 2>&1; then
             info "Installing missing packages with yum..."
-            yum install -y wget tar make clang clang++ openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel
+            yum install -y wget tar make clang openssl-devel libffi-devel zlib-devel bzip2-devel readline-devel sqlite-devel ncurses-devel xz-devel glibc-devel
         else
             error "No supported package manager found. Please install required packages manually."
             exit 1
